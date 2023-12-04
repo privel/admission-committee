@@ -1,0 +1,100 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  overflow-x: hidden;
+    overflow-y:hidden;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+.inner_form{
+
+    width: 600px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="username"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    height: 40px;
+}
+
+
+button {
+
+    width: 100%;
+
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #6190E8;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6190E8;
+}
+
+
+.content-wrapper {
+    display: flex; /* Активирует flexbox для контейнера */
+    align-items: center; /* Центрирует содержимое по вертикали */
+    justify-content: center; /* Центрирует содержимое по горизонтали */
+}
+
+.text-content {
+    flex: 1; /* Позволяет тексту заполнить все доступное пространство слева */
+    padding-right: 20px; /* Добавляет пространство между текстом и изображением */
+    order: 1;
+}
+
+.image-content {
+    flex: 0 0 auto; /* Предотвращает растягивание блока изображения, сохраняет его исходные размеры */
+    display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+
+}
+
+img {
+    max-width: 100%; /* Убедитесь, что изображение адаптивно и не выходит за пределы своего контейнера */
+
+     height: 103vh;
+    width: 1000px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 70px 0px 0px 70px;
+}
+
+.form-side{
+    margin-left: 200px;
+}

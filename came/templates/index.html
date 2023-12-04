@@ -1,72 +1,32 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="css/index_style.css">
-    <link rel="stylesheet" type="text/css" href="css/index_style.css">
+    <link rel="stylesheet" href="{% static 'index_style.css' %}">
 
 </head>
 <body>
-<div class="header">
-    <div class="logo">Your Logo</div>
-    <div class="navigation">
-        <button class="nav-button">Home</button>
-        <button class="nav-button">Partners</button>
-        <button class="nav-button">About Us</button>
+
+
+    <form method="post" class="form-side">
+    {% csrf_token %}
+        <h1>Welcome back</h1>
+    <div class="inner_form">
+        <h4>User name</h4>
+        {{ form.username }}
+        <h4>Password</h4>
+        {{ form.password1 }}
     </div>
-    <div class="sign-in">
-        <button class="sign-in-button">Sign In</button>
+    <h1></h1>
+    <button type="submit">Sign up</button>
+</form>
+<div class="content-wrapper">
+
+    <div class="image-content">
+        <img src="{% static 'image/side_image.png' %}" width="1000px" height="1042px">
     </div>
 </div>
 
 
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-    }
-
-    .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #333;
-        color: white;
-        padding: 10px 20px;
-    }
-
-    .logo {
-        font-size: 24px;
-    }
-
-    .navigation .nav-button {
-        {#background-color: #4CAF50;#}
-        color: black;
-        border: none;
-        padding: 10px 20px;
-        margin: 0 5px;
-        cursor: pointer;
-    }
-
-    .sign-in {
-        align-self: flex-end;
-    }
-
-    .sign-in-button {
-        background-color: blue;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        cursor: pointer;
-    }
-
-    .sign-in-button:hover {
-        background-color: darkblue;
-    }
-
-    .navigation .nav-button:hover {
-        background-color: green;
-    }
-
-</style>
 </body>
 </html>
